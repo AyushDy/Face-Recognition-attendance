@@ -1,0 +1,144 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Navbar Styling */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Sidebar Styling */
+.hamburger {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    color: #333;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0; /* Align with navbar */
+    left: 0;
+    width: 200px;
+    height: 100%; /* Full height */
+    background-color: #333;
+    padding-top: 60px; /* Padding to accommodate the top navbar */
+    transition: left 0.3s;
+    color: #fff;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Sidebar Item Hover Background - Green */
+.sidebar a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+}
+
+/* Main Container to position Sidebar and Content */
+.main-container {
+    display: flex;
+}
+
+/* Content Styling */
+.content {
+    margin-left: 200px;
+    padding: 80px 20px 20px; /* Padding to avoid overlap with navbar */
+    transition: margin-left 0.3s;
+    flex: 1;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Button Styling */
+.redirect a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.redirect {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.redirect:hover {
+    background-color: #45a049;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .sidebar {
+        left: -220px;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

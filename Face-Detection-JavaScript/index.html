@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Sidebar Navigation with Navbar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+</style>
+<body>
+
+<!-- Top Navbar -->
+<nav class="top-navbar">
+  <div class="navbar-logo">Student Portal</div>
+  <ul class="navbar-links">
+    <li><a href="./form.html">Login</a></li>
+    <li><a href="./adminform.html">Admin</a></li>
+  </ul>
+</nav>
+
+<!-- Main Container -->
+<div class="main-container">
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <a href="#" id="dashboard-link" class="active" onclick="showSection('dashboard')">Home</a>
+    <a href="#" id="attendance-link" onclick="showSection('fileupload')">Attendance</a>
+    <a href="#" id="request-link" onclick="showSection('request')">Request</a>
+    <a href="#" id="complain-link" onclick="showSection('complain')">Complain</a> <!-- New Complain Link -->
+</div>
+
+<!-- Main Content Area -->
+<div class="content">
+  <div id="dashboard" class="section active">
+    <h1>Home</h1>
+    <p>Welcome to the Dashboard. This is where you'll see key metrics and updates.</p>
+  </div>
+  <div id="fileupload" class="section">
+    <h1>Attendance</h1>
+    <p>This section allows you to upload files for attendance tracking.</p>
+  </div>
+  <div id="request" class="section">
+    <h1>Request</h1>
+    <p>Submit your requests here for processing.</p>
+  </div>
+  <div id="complain" class="section">
+    <h1>Complain</h1>
+    <p>Submit your complaints here for resolution.</p>
+    <!-- Add your complaint form or content here -->
+  </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
